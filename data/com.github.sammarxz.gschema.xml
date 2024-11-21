@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="pomerode">
 	<schema id="com.github.sammarxz" path="/com/github/sammarxz/">
+	  <key name="work-duration" type="i">
+      <default>25</default>
+      <summary>Work Duration</summary>
+      <description>Duration of work intervals in minutes</description>
+    </key>
+    <key name="break-duration" type="i">
+      <default>5</default>
+      <summary>Break Duration</summary>
+      <description>Duration of break intervals in minutes</description>
+    </key>
+    <key name="long-break-duration" type="i">
+      <default>15</default>
+      <summary>Long Break Duration</summary>
+      <description>Duration of long break intervals in minutes</description>
+    </key>
+    <key name="intervals-until-long-break" type="i">
+      <default>4</default>
+      <summary>Intervals until Long Break</summary>
+      <description>Number of work intervals before a long break</description>
+    </key>
+    <key name="autostart-intervals" type="b">
+      <default>false</default>
+      <summary>Autostart Intervals</summary>
+      <description>Automatically start next interval when current one ends</description>
+    </key>
 	</schema>
 </schemalist>

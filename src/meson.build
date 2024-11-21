@@ -2,6 +2,7 @@ pomerode_sources = [
   'main.vala',
   'application.vala',
   'window.vala',
+  'preferences.vala',
 ]
 
 pomerode_deps = [
@@ -10,7 +11,8 @@ pomerode_deps = [
   dependency('libadwaita-1', version: '>= 1.4'),
 ]
 
-pomerode_sources += gnome.compile_resources('pomerode-resources',
+pomerode_sources += gnome.compile_resources(
+  'pomerode-resources',
   'pomerode.gresource.xml',
   c_name: 'pomerode'
 )
@@ -18,5 +20,5 @@ pomerode_sources += gnome.compile_resources('pomerode-resources',
 executable('pomerode', pomerode_sources,
   dependencies: pomerode_deps,
   include_directories: config_inc,
-       install: true,
+  install: true,
 )

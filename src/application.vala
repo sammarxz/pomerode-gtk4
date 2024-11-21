@@ -51,13 +51,14 @@ public class Pomerode.Application : Adw.Application {
             translator_credits = _("translator-credits"),
             version = "0.1.0",
             developers = developers,
-            copyright = "© 2024 atom",
+            copyright = "© 2024 @sammarxz",
         };
 
         about.present (this.active_window);
     }
 
     private void on_preferences_action () {
-        message ("app.preferences action activated");
+        var preferences = new Pomerode.PreferencesWindow ((Adw.Window) this.active_window);
+        preferences.present ();
     }
 }

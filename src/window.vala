@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-[GtkTemplate (ui = "/com/github/sammarxz/window.ui")]
+[GtkTemplate (ui = "/com/github/sammarxz/ui/window.ui")]
 public class Pomerode.Window : Adw.ApplicationWindow {
     [GtkChild]
     private unowned Gtk.Label time_label;

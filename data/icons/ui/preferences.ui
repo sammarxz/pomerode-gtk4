@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <requires lib="Adw" version="1.0"/>
+  <template class="PomerodePreferencesWindow" parent="AdwPreferencesWindow">
+    <property name="title" translatable="yes">Preferences</property>
+    <property name="default-width">500</property>
+    <property name="default-height">400</property>
+    <child>
+      <object class="AdwPreferencesPage">
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title">Intervals</property>
+            <child>
+              <object class="AdwSpinRow" id="work_duration">
+                <property name="title">Work Duration</property>
+                <property name="subtitle">Duration in minutes</property>
+                <property name="adjustment">
+                  <object class="GtkAdjustment">
+                    <property name="lower">1</property>
+                    <property name="upper">60</property>
+                    <property name="value">25</property>
+                    <property name="step-increment">1</property>
+                  </object>
+                </property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSpinRow" id="break_duration">
+                <property name="title">Break Duration</property>
+                <property name="subtitle">Duration in minutes</property>
+                <property name="adjustment">
+                  <object class="GtkAdjustment">
+                    <property name="lower">1</property>
+                    <property name="upper">30</property>
+                    <property name="value">5</property>
+                    <property name="step-increment">1</property>
+                  </object>
+                </property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSpinRow" id="long_break_duration">
+                <property name="title">Long Break Duration</property>
+                <property name="subtitle">Duration in minutes</property>
+                <property name="adjustment">
+                  <object class="GtkAdjustment">
+                    <property name="lower">1</property>
+                    <property name="upper">60</property>
+                    <property name="value">15</property>
+                    <property name="step-increment">1</property>
+                  </object>
+                </property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSpinRow" id="intervals_until_long_break">
+                <property name="title">Intervals until Long Break</property>
+                <property name="subtitle">Number of work intervals before a long break</property>
+                <property name="adjustment">
+                  <object class="GtkAdjustment">
+                    <property name="lower">1</property>
+                    <property name="upper">10</property>
+                    <property name="value">4</property>
+                    <property name="step-increment">1</property>
+                  </object>
+                </property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSwitchRow" id="autostart_intervals">
+                <property name="title">Autostart Intervals</property>
+                <property name="subtitle">Automatically start next interval when current one ends</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>
