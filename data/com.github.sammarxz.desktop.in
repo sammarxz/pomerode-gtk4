@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=pomerode
+Exec=pomerode
+Icon=com.github.sammarxz
+Terminal=false
+Type=Application
+Categories=Utility;
+Keywords=GTK;
+StartupNotify=true
+DBusActivatable=true

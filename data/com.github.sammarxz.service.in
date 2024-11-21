@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=com.github.sammarxz
+Exec=@bindir@/pomerode --gapplication-service

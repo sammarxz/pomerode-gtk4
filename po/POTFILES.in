@@ -1,0 +1,8 @@
+# List of source files containing translatable strings.
+# Please keep this file sorted alphabetically.
+data/com.github.sammarxz.desktop.in
+data/com.github.sammarxz.metainfo.xml.in
+data/com.github.sammarxz.gschema.xml
+src/main.vala
+src/window.vala
+src/window.ui
