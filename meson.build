@@ -22,7 +22,6 @@ config_inc = include_directories('.')
 
 add_project_arguments('-DGETTEXT_PACKAGE="' + meson.project_name () + '"', language: 'c')
 
-
 subdir('data')
 subdir('src')
 subdir('po')
