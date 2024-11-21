@@ -66,6 +66,15 @@ public class Pomerode.Window : Adw.ApplicationWindow {
         if (!is_running) {
             reset_timer ();
         }
+
+        if (key == "intervals-until-long-break") {
+            // Limpar os indicadores existentes
+            while (session_indicators.get_first_child () != null) {
+                session_indicators.remove (session_indicators.get_first_child ());
+            }
+            // Recriar os indicadores com o novo valor
+            setup_session_indicators ();
+        }
     }
 
     private void toggle_timer () {
@@ -73,9 +82,13 @@ public class Pomerode.Window : Adw.ApplicationWindow {
         if (is_running) {
             start_timer ();
             start_button.label = "Pause";
+            start_button.remove_css_class("play-button");
+            start_button.add_css_class("pause-button");
         } else {
             stop_timer ();
             start_button.label = "Start";
+            start_button.remove_css_class("pause-button");
+            start_button.add_css_class("play-button");
         }
     }
 
@@ -161,6 +174,8 @@ public class Pomerode.Window : Adw.ApplicationWindow {
         update_label ();
         update_session_label ();
         start_button.label = "Start";
+        start_button.remove_css_class("pause-button");
+        start_button.add_css_class("play-button");
         is_running = false;
     }
 

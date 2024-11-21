@@ -68,6 +68,8 @@
                     <style>
                       <class name="suggested-action"/>
                       <class name="action-button"/>
+                      <class name="play-button"/>
+                      <class name="action-button"/>
                     </style>
                   </object>
                 </child>
