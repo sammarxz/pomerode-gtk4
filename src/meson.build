@@ -20,5 +20,5 @@ pomerode_sources += gnome.compile_resources(
 executable('pomerode', pomerode_sources,
   dependencies: pomerode_deps,
   include_directories: config_inc,
-  install: true,
+  install: true
 )
