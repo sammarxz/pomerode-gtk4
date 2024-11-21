@@ -21,11 +21,46 @@
           </object>
         </child>
         <property name="content">
-          <object class="GtkLabel" id="label">
-            <property name="label" translatable="yes">Hello, World!</property>
-            <style>
-              <class name="title-1"/>
-            </style>
+          <object class="GtkBox" id="main_box">
+            <property name="orientation">vertical</property>
+            <property name="spacing">12</property>
+            <property name="margin-top">12</property>
+            <property name="margin-bottom">12</property>
+            <property name="margin-start">12</property>
+            <property name="margin-end">12</property>
+
+            <child>
+              <object class="GtkLabel" id="time_label">
+                <property name="label">25:00</property>
+                <style>
+                  <class name="title-1"/>
+                </style>
+              </object>
+            </child>
+
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">horizontal</property>
+                <property name="spacing">6</property>
+                <property name="halign">center</property>
+
+                <child>
+                  <object class="GtkButton" id="start_button">
+                    <property name="label">Start</property>
+                    <style>
+                      <class name="suggested-action"/>
+                    </style>
+                  </object>
+                </child>
+
+                <child>
+                  <object class="GtkButton" id="reset_button">
+                    <property name="label">Reset</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+
           </object>
         </property>
       </object>
@@ -48,3 +83,4 @@
     </section>
   </menu>
 </interface>
+

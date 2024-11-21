@@ -21,7 +21,13 @@
 [GtkTemplate (ui = "/com/github/sammarxz/window.ui")]
 public class Pomerode.Window : Adw.ApplicationWindow {
     [GtkChild]
-    private unowned Gtk.Label label;
+    private unowned Gtk.Label time_label;
+
+    [GtkChild]
+    private unowned Gtk.Button start_button;
+
+    [GtkChild]
+    private unowned Gtk.Button reset_button;
 
     public Window (Gtk.Application app) {
         Object (application: app);
