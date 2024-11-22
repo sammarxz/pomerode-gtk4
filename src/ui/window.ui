@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
+  <requires lib="gtk" version="4.0" />
+  <requires lib="libadwaita" version="1.0" />
   <template class="PomerodeWindow" parent="AdwApplicationWindow">
     <property name="title">Pomerode</property>
     <property name="default-width">300</property>
     <property name="default-height">500</property>
     <property name="resizable">false</property>
     <child>
-      <object class="AdwToolbarView">
-        <child type="top">
+      <object class="GtkBox">
+        <property name="orientation">vertical</property>
+        <child>
           <object class="AdwHeaderBar">
+            <style>
+              <class name="flat" />
+            </style>
             <child type="end">
               <object class="GtkMenuButton">
                 <property name="icon-name">open-menu-symbolic</property>
@@ -17,12 +23,13 @@
             </child>
           </object>
         </child>
-        <property name="content">
+        <child>
           <object class="GtkBox">
             <property name="orientation">vertical</property>
             <property name="vexpand">true</property>
             <property name="margin-start">12</property>
             <property name="margin-end">12</property>
+            <property name="spacing">12</property>
             <child>
               <object class="GtkBox">
                 <property name="orientation">vertical</property>
@@ -33,7 +40,7 @@
                   <object class="GtkLabel" id="session_label">
                     <property name="label">Focus Time</property>
                     <style>
-                      <class name="session-label"/>
+                      <class name="session-label" />
                     </style>
                   </object>
                 </child>
@@ -41,7 +48,7 @@
                   <object class="GtkLabel" id="time_label">
                     <property name="label">25:00</property>
                     <style>
-                      <class name="time-label"/>
+                      <class name="time-label" />
                     </style>
                   </object>
                 </child>
@@ -51,7 +58,7 @@
                     <property name="spacing">4</property>
                     <property name="halign">center</property>
                     <style>
-                      <class name="session-indicators"/>
+                      <class name="session-indicators" />
                     </style>
                   </object>
                 </child>
@@ -66,20 +73,19 @@
                     <property name="label">Start</property>
                     <property name="hexpand">true</property>
                     <style>
-                      <class name="suggested-action"/>
-                      <class name="action-button"/>
-                      <class name="play-button"/>
-                      <class name="action-button"/>
+                      <class name="play-button" />
+                      <class name="action-button" />
                     </style>
                   </object>
                 </child>
               </object>
             </child>
           </object>
-        </property>
+        </child>
       </object>
     </child>
   </template>
+
   <menu id="primary_menu">
     <section>
       <item>

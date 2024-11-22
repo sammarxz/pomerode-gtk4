@@ -22,7 +22,7 @@ public class Pomerode.Application : Adw.Application {
     public Application () {
         Object (
             application_id: "com.github.sammarxz",
-            flags: ApplicationFlags.DEFAULT_FLAGS
+            flags: ApplicationFlags.FLAGS_NONE
         );
     }
 
@@ -44,17 +44,17 @@ public class Pomerode.Application : Adw.Application {
 
     private void on_about_action () {
         string[] developers = { "atom" };
-        var about = new Adw.AboutDialog () {
-            application_name = "pomerode",
-            application_icon = "com.github.sammarxz",
-            developer_name = "atom",
+        var about = new Gtk.AboutDialog () {
+            program_name = "pomerode",
+            logo_icon_name = "com.github.sammarxz",
+            authors = { "@sammarxz" },
             translator_credits = _("translator-credits"),
             version = "0.1.0",
-            developers = developers,
+            authors = developers,
             copyright = "© 2024 @sammarxz",
         };
 
-        about.present (this.active_window);
+        about.present ();
     }
 
     private void on_preferences_action () {
