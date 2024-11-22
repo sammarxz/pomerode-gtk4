@@ -1,4 +1,4 @@
-[GtkTemplate (ui = "/com/github/sammarxz/ui/window.ui")]
+[GtkTemplate (ui = "/com/github/sammarxz/pomerode/ui/window.ui")]
 public class Pomerode.Window : Adw.ApplicationWindow {
     private enum SessionType {
         FOCUS,

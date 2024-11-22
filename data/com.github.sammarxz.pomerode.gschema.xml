@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schemalist gettext-domain="pomerode">
-	<schema id="com.github.sammarxz" path="/com/github/sammarxz/">
-	  <key name="work-duration" type="i">
+<schemalist>
+  <schema id="com.github.sammarxz.pomerode" path="/com/github/sammarxz/pomerode/">
+    <key name="work-duration" type="i">
       <default>25</default>
       <summary>Work Duration</summary>
       <description>Duration of work intervals in minutes</description>
@@ -26,5 +26,5 @@
       <summary>Autostart Intervals</summary>
       <description>Automatically start next interval when current one ends</description>
     </key>
-	</schema>
+  </schema>
 </schemalist>

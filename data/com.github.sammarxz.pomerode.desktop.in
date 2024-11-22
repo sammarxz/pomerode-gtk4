@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Pomerode
+Comment=A simple focus timer app
+Exec=pomerode
+Icon=com.github.sammarxz.pomerode
+Terminal=false
+Categories=Utility;Productivity;GTK;
+Keywords=Pomodoro;Timer;Focus;
+X-GNOME-UsesNotifications=true

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <requires lib="gtk" version="4.0" />
-  <requires lib="libadwaita" version="1.0" />
+  <requires lib="gtk" version="4.0"/>
+  <requires lib="libadwaita" version="1.0"/>
   <template class="PomerodeWindow" parent="AdwApplicationWindow">
     <property name="title">Pomerode</property>
     <property name="default-width">300</property>
@@ -13,7 +13,7 @@
         <child>
           <object class="AdwHeaderBar">
             <style>
-              <class name="flat" />
+              <class name="flat"/>
             </style>
             <child type="end">
               <object class="GtkMenuButton">
@@ -40,7 +40,7 @@
                   <object class="GtkLabel" id="session_label">
                     <property name="label">Focus Time</property>
                     <style>
-                      <class name="session-label" />
+                      <class name="session-label"/>
                     </style>
                   </object>
                 </child>
@@ -48,7 +48,7 @@
                   <object class="GtkLabel" id="time_label">
                     <property name="label">25:00</property>
                     <style>
-                      <class name="time-label" />
+                      <class name="time-label"/>
                     </style>
                   </object>
                 </child>
@@ -58,7 +58,7 @@
                     <property name="spacing">4</property>
                     <property name="halign">center</property>
                     <style>
-                      <class name="session-indicators" />
+                      <class name="session-indicators"/>
                     </style>
                   </object>
                 </child>
@@ -73,8 +73,8 @@
                     <property name="label">Start</property>
                     <property name="hexpand">true</property>
                     <style>
-                      <class name="play-button" />
-                      <class name="action-button" />
+                      <class name="play-button"/>
+                      <class name="action-button"/>
                     </style>
                   </object>
                 </child>
@@ -85,7 +85,7 @@
       </object>
     </child>
   </template>
-
+  
   <menu id="primary_menu">
     <section>
       <item>

@@ -1,26 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>com.github.sammarxz</id>
+  <id>@appid@</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
 
   <name>Pomerode</name>
   <summary>Minimal Pomodoro timer</summary>
   <description>
-    <p>Pomerode is a sleek and user-friendly Pomodoro timer designed for elementary OS. Built with GTK4 and Libadwaita, it helps you maintain focus and productivity using the Pomodoro Technique.</p>
+    <p>Pomerode is a sleek and user-friendly Pomodoro timer designed for elementary OS. Built with
+      GTK4 and Libadwaita, it helps you maintain focus and productivity using the Pomodoro
+      Technique.</p>
     <h3>Features</h3>
     <ul>
-      <li><strong>Clean and Modern Interface</strong> ollows elementary OS's design guidelines for a native look and feel</li>
-      <li><strong>Customizable Intervals</strong> Adjust work duration, break duration, and long break settings</li>
-      <li><strong>Session Tracking</strong> Visual indicators show your progress through work intervals</li>
+      <li><strong>Clean and Modern Interface</strong> ollows elementary OS's design guidelines for a
+        native look and feel</li>
+      <li><strong>Customizable Intervals</strong> Adjust work duration, break duration, and long
+        break settings</li>
+      <li><strong>Session Tracking</strong> Visual indicators show your progress through work
+        intervals</li>
       <li><strong>Smart Breaks</strong> Automatically switches between focus sessions and breaks</li>
-      <li><strong>Autostart Option</strong> Seamlessly transition between sessions with automatic start</li>
+      <li><strong>Autostart Option</strong> Seamlessly transition between sessions with automatic
+        start</li>
       <li><strong>System Notifications</strong> Get notified when sessions end or breaks begin</li>
       <li><strong>Distraction-free</strong> Minimal interface helps you stay focused on your tasks</li>
     </ul>
     <br />
     <h3>The Pomodoro Technique</h3>
-    <p>The Pomodoro Technique is a time management method that uses a timer to break work into focused intervals (traditionally 25 minutes) separated by short breaks. After a set number of work intervals, you take a longer break. This helps maintain mental freshness and sustained concentration.</p>
+    <p>The Pomodoro Technique is a time management method that uses a timer to break work into
+      focused intervals (traditionally 25 minutes) separated by short breaks. After a set number of
+      work intervals, you take a longer break. This helps maintain mental freshness and sustained
+      concentration.</p>
   </description>
 
   <developer id="tld.vendor">
@@ -29,13 +38,16 @@
 
   <!-- Requered: Should be a link to the upstream homepage for the component -->
   <url type="homepage">https://github.com/sammarxz/pomerode</url>
-  <!-- Recommended: It is highly recommended for open-source projects to display the source code repository -->
+  <!-- Recommended: It is highly recommended for open-source projects to display the source code
+  repository -->
   <url type="vcs-browser">https://github.com/sammarxz/pomerode</url>
   <translation type="gettext">pomerode</translation>
   <!-- All graphical applications having a desktop file must have this tag in the MetaInfo.
-     If this is present, appstreamcli compose will pull icons, keywords and categories from the desktop file. -->
-  <launchable type="desktop-id">com.github.sammarxz.desktop</launchable>
-  <!-- Use the OARS website (https://hughsie.github.io/oars/generate.html) to generate these and make sure to use oars-1.1 -->
+     If this is present, appstreamcli compose will pull icons, keywords and categories from the desktop
+  file. -->
+  <launchable type="desktop-id">com.github.sammarxz.pomerode.desktop</launchable>  <!-- Use the OARS
+  website (https://hughsie.github.io/oars/generate.html) to generate these and make sure to use
+  oars-1.1 -->
   <content_rating type="oars-1.1" />
 
   <!-- Applications should set a brand color in both light and dark variants like so -->
@@ -45,16 +57,19 @@
   </branding>
 
   <screenshots>
-     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/sammarxz/pomerode/refs/heads/main/data/appdata/pomo-dark.png</image>
+    <screenshot type="default">
+      <image>
+        https://raw.githubusercontent.com/sammarxz/pomerode/refs/heads/main/data/appdata/pomo-dark.png</image>
       <caption>Initial screen (dark mode)</caption>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/sammarxz/pomerode/refs/heads/main/data/appdata/pomo-light.png</image>
+      <image>
+        https://raw.githubusercontent.com/sammarxz/pomerode/refs/heads/main/data/appdata/pomo-light.png</image>
       <caption>Initial screen (light mode)</caption>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/sammarxz/pomerode/refs/heads/main/data/appdata/pomo-settings.png</image>
+      <image>
+        https://raw.githubusercontent.com/sammarxz/pomerode/refs/heads/main/data/appdata/pomo-settings.png</image>
       <caption>Preferences screen</caption>
     </screenshot>
   </screenshots>

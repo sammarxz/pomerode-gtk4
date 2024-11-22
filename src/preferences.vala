@@ -1,6 +1,6 @@
 namespace Pomerode {
 
-[GtkTemplate (ui = "/com/github/sammarxz/ui/preferences.ui")]
+[GtkTemplate (ui = "/com/github/sammarxz/pomerode/ui/preferences.ui")]    
 public class PreferencesWindow : Adw.PreferencesWindow {
     [GtkChild]
     private unowned Gtk.Entry work_duration_entry;
@@ -86,11 +86,11 @@ public class PreferencesWindow : Adw.PreferencesWindow {
     }
 
     private void connect_duration_controls(string key,
-                                     Gtk.Entry entry,
-                                     Gtk.Button minus,
-                                     Gtk.Button plus,
-                                     int min_value,
-                                     int max_value) {
+                                        Gtk.Entry entry,
+                                        Gtk.Button minus,
+                                        Gtk.Button plus,
+                                        int min_value,
+                                        int max_value) {
     minus.clicked.connect(() => {
         update_setting(key, -1, min_value, max_value);
     });
@@ -136,5 +136,5 @@ public class PreferencesWindow : Adw.PreferencesWindow {
         intervals_until_long_break_entry.text = settings.get_int("intervals-until-long-break").to_string();
     }
 }
-
-}
+    
+} // namespace Pomerode

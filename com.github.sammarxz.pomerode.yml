@@ -1,0 +1,33 @@
+app-id: com.github.sammarxz.pomerode
+runtime: org.gnome.Platform
+runtime-version: '45'
+sdk: org.gnome.Sdk
+command: pomerode
+finish-args:
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
+  - --talk-name=org.freedesktop.Notifications
+  - --filesystem=xdg-config/glib-2.0
+  - --metadata=X-DConf=migrate-path=/com/github/sammarxz/pomerode/
+
+modules:
+  - name: libadwaita
+    buildsystem: meson
+    config-opts:
+      - -Dexamples=false
+      - -Dtests=false
+    sources:
+      - type: git
+        url: https://gitlab.gnome.org/GNOME/libadwaita.git
+        tag: '1.4.0'
+
+  - name: pomerode
+    buildsystem: meson
+    sources:
+      - type: dir
+        path: .
+    post-install:
+      - install -Dm644 data/com.github.sammarxz.pomerode.gschema.xml /app/share/glib-2.0/schemas/
+      - glib-compile-schemas /app/share/glib-2.0/schemas/

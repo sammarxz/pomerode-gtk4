@@ -1,33 +1,91 @@
-project('pomerode', ['c', 'vala'],
-          version: '0.1.0',
-    meson_version: '>= 1.0.0',
-  default_options: [ 'warning_level=2', 'werror=false', ],
+project('com.github.sammarxz.pomerode', ['c', 'vala'],
+    version: '0.1.0',
 )
 
-i18n = import('i18n')
+app_id = 'com.github.sammarxz.pomerode'
+
 gnome = import('gnome')
-valac = meson.get_compiler('vala')
 
+add_project_arguments(
+    '-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name()),
+    language: 'c'
+)
 
-srcdir = meson.project_source_root() / 'src'
+# Dependencies
+dependencies = [
+    dependency('gtk4'),
+    dependency('libadwaita-1'),
+    dependency('glib-2.0'),
+    dependency('gobject-2.0'),
+    dependency('gio-2.0'),
+]
 
-config_h = configuration_data()
-config_h.set_quoted('PACKAGE_VERSION', meson.project_version ())
-config_h.set_quoted('GETTEXT_PACKAGE', 'pomerode')
-config_h.set_quoted('LOCALEDIR', get_option('prefix') / get_option('localedir'))
-configure_file(output: 'config.h', configuration: config_h)
+# Sources
+sources = files(
+    'src/main.vala',
+    'src/application.vala',
+    'src/preferences.vala',
+    'src/window.vala',
+)
 
-config_dep = valac.find_library ('config', dirs: srcdir)
-config_inc = include_directories('.')
+# GResource
+gresource = gnome.compile_resources(
+    'com.github.sammarxz.pomerode',
+    join_paths('data', 'com.github.sammarxz.pomerode.gresource.xml'),
+    source_dir: 'data',
+    c_name: 'pomerode'
+)
 
-add_project_arguments('-DGETTEXT_PACKAGE="' + meson.project_name () + '"', language: 'c')
+# GSchema
+install_data(
+    'data/com.github.sammarxz.pomerode.gschema.xml',
+    install_dir: join_paths(get_option('datadir'), 'glib-2.0', 'schemas')
+)
 
-subdir('data')
-subdir('src')
-subdir('po')
+# Compile schemas
+meson.add_install_script('build-aux/meson/postinstall.py')
 
-gnome.post_install(
-     glib_compile_schemas: true,
-    gtk_update_icon_cache: true,
-  update_desktop_database: true,
+# Desktop file
+desktop_file = configure_file(
+    input: 'data/com.github.sammarxz.pomerode.desktop.in',
+    output: 'com.github.sammarxz.pomerode.desktop',
+    configuration: configuration_data({
+        'icon': app_id,
+        'binary': app_id
+    }),
+)
+
+install_data(
+    desktop_file,
+    install_dir: join_paths(get_option('datadir'), 'applications')
+)
+
+# Metainfo
+install_data(
+    'data/com.github.sammarxz.pomerode.metainfo.xml',
+    install_dir: join_paths(get_option('datadir'), 'metainfo')
+)
+
+# Icons
+icon_sizes = ['16', '32', '48', '64', '128']
+
+foreach size : icon_sizes
+    install_data(
+        join_paths('data/icons', size + 'x' + size, 'com.github.sammarxz.pomerode.svg'),
+        install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', size + 'x' + size, 'apps')
+    )
+endforeach
+
+install_data(
+    'data/icons/hicolor/symbolic/apps/com.github.sammarxz.pomerode-symbolic.svg',
+    install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', 'symbolic', 'apps')
+)
+
+# Executable
+executable(
+    meson.project_name(),
+    sources,
+    gresource,
+    dependencies: dependencies,
+    install: true
 )

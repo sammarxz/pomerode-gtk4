@@ -1,27 +1,7 @@
-/* application.vala
- *
- * Copyright 2024 @sammarxz
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <https://www.gnu.org/licenses/>.
- *
- * SPDX-License-Identifier: GPL-3.0-or-later
- */
-
 public class Pomerode.Application : Adw.Application {
     public Application () {
         Object (
-            application_id: "com.github.sammarxz",
+            application_id: "com.github.sammarxz.pomerode",
             flags: ApplicationFlags.FLAGS_NONE
         );
     }
@@ -43,17 +23,19 @@ public class Pomerode.Application : Adw.Application {
     }
 
     private void on_about_action () {
-        string[] developers = { "atom" };
         var about = new Gtk.AboutDialog () {
-            program_name = "pomerode",
-            logo_icon_name = "com.github.sammarxz",
-            authors = { "@sammarxz" },
-            translator_credits = _("translator-credits"),
+            program_name = "Pomerode",
+            logo_icon_name = "com.github.sammarxz.pomerode",
             version = "0.1.0",
-            authors = developers,
+            authors = { "@sammarxz" },
             copyright = "© 2024 @sammarxz",
+            license_type = Gtk.License.GPL_3_0,
+            website = "https://github.com/sammarxz/pomerode",
+            website_label = "Project Website",
+            comments = "A simple focus timer app",
+            translator_credits = "translator-credits",
+            transient_for = this.active_window
         };
-
         about.present ();
     }
 
