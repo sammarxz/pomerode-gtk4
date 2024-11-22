@@ -115,17 +115,20 @@ public class Pomerode.Window : Adw.ApplicationWindow {
     private void handle_session_complete () {
         string message = get_completion_message ();
         send_notification (message);
-
+    
         if (current_session == SessionType.FOCUS) {
             completed_focus_sessions++;
+            update_indicators ();
         }
-
+    
         advance_session ();
         reset_timer ();
-
+    
         if (autostart_intervals) {
             start_timer ();
             start_button.label = "Pause";
+            start_button.remove_css_class ("play-button");
+            start_button.add_css_class ("pause-button");
             is_running = true;
         }
     }

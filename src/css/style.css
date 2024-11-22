@@ -1,15 +1,23 @@
 .titlebar {
-  background: transparent;
+  background: @window_bg_color;
   border-bottom: none;
 }
 
 headerbar {
-  background: transparent;
+  background: @window_bg_color;
   border-bottom: none;
 }
 
 window {
-  background-color: @card_bg_color;
+  background-color: @window_bg_color;
+}
+
+window.dark {
+  background-color: @window_bg_color;
+}
+
+.titlebar.dark {
+  background-color: @window_bg_color;
 }
 
 .time-label {
