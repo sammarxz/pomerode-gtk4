@@ -46,15 +46,15 @@
 
   <screenshots>
      <screenshot type="default">
-      <image>https://raw.githubusercontent.com/sammarxz/pomerode-gtk4/refs/heads/main/data/appdata/pomo-dark.png</image>
+      <image>https://raw.githubusercontent.com/sammarxz/pomerode/refs/heads/main/data/appdata/pomo-dark.png</image>
       <caption>Initial screen (dark mode)</caption>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/sammarxz/pomerode-gtk4/refs/heads/main/data/appdata/pomo-light.png</image>
+      <image>https://raw.githubusercontent.com/sammarxz/pomerode/refs/heads/main/data/appdata/pomo-light.png</image>
       <caption>Initial screen (light mode)</caption>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/sammarxz/pomerode-gtk4/refs/heads/main/data/appdata/pomo-settings.png</image>
+      <image>https://raw.githubusercontent.com/sammarxz/pomerode/refs/heads/main/data/appdata/pomo-settings.png</image>
       <caption>Preferences screen</caption>
     </screenshot>
   </screenshots>
