@@ -30,7 +30,7 @@ sudo apt install elementary-sdk meson ninja-build libgtk-4-dev libadwaita-1-dev
 
 Clone the repository and build:
 ```bash
-git clone https://github.com/yourusername/pomerode.git
+git clone https://github.com/sammarxz/pomerode.git
 cd pomerode
 meson build --prefix=/usr
 cd build
