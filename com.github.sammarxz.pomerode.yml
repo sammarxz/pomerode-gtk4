@@ -13,16 +13,6 @@ finish-args:
   - --metadata=X-DConf=migrate-path=/com/github/sammarxz/pomerode/
 
 modules:
-  - name: libadwaita
-    buildsystem: meson
-    config-opts:
-      - -Dexamples=false
-      - -Dtests=false
-    sources:
-      - type: git
-        url: https://gitlab.gnome.org/GNOME/libadwaita.git
-        tag: '1.4.0'
-
   - name: pomerode
     buildsystem: meson
     sources:
