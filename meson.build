@@ -83,7 +83,7 @@ install_data(
 
 # Executable
 executable(
-    meson.project_name(),
+    'pomerode',
     sources,
     gresource,
     dependencies: dependencies,
