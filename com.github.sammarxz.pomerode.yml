@@ -18,6 +18,3 @@ modules:
     sources:
       - type: dir
         path: .
-    post-install:
-      - install -Dm644 data/com.github.sammarxz.pomerode.gschema.xml /app/share/glib-2.0/schemas/
-      - glib-compile-schemas /app/share/glib-2.0/schemas/
