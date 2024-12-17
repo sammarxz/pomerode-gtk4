@@ -1,7 +1,7 @@
 app-id: com.github.sammarxz.pomerode
-runtime: org.gnome.Platform
-runtime-version: '45'
-sdk: org.gnome.Sdk
+runtime: io.elementary.Platform
+runtime-version: '8'
+sdk: io.elementary.Sdk
 command: pomerode
 finish-args:
   - --share=ipc
