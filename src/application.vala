@@ -40,7 +40,7 @@ public class Pomerode.Application : Adw.Application {
     }
 
     private void on_preferences_action () {
-        var preferences = new Pomerode.PreferencesWindow ((Adw.Window) this.active_window);
+        var preferences = new Pomerode.PreferencesWindow ((Adw.ApplicationWindow) this.active_window);
         preferences.present ();
     }
 }

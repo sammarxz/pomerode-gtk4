@@ -40,7 +40,7 @@ public class PreferencesWindow : Adw.PreferencesWindow {
     private const int MAX_LONG_BREAK_DURATION = 60;
     private const int MAX_INTERVALS = 10;
 
-    public PreferencesWindow (Adw.Window parent) {
+    public PreferencesWindow (Adw.ApplicationWindow parent) {
         Object (transient_for: parent, modal: true);
         setup_settings();
         connect_signals();
