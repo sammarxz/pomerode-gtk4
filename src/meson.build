@@ -1,11 +1,10 @@
-vapi_sources = files(
-  'config.vapi',
-)
+# vapi_sources = files(
+#   'config.vapi',
+# )
 
 pomerode_vala_args = [
   '--target-glib', '2.72',
   '--vapidir', meson.current_source_dir(),
-  '--gresources', resource_files,
   # '--enable-experimental-non-null',
 ]
 
@@ -18,15 +17,8 @@ pomerode_vala_sources = files(
 
 pomerode_sources = [
     pomerode_vala_sources,
-    vapi_sources,
+    # vapi_sources,
     resources
-]
-
-pomerode_vala_args = [
-  '--target-glib', '2.72',
-  '--vapidir', meson.current_source_dir(),
-  '--gresources', resource_files,
-  # '--enable-experimental-non-null',
 ]
 
 pomerode_dependencies = [

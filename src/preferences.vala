@@ -48,7 +48,7 @@ public class PreferencesWindow : Adw.PreferencesWindow {
     }
 
     private void setup_settings() {
-        settings = new Settings ("com.github.sammarxz");
+        settings = new Settings ("com.github.sammarxz.pomerode");
         settings.bind("autostart-intervals",
                     autostart_intervals_switch,
                     "active",

@@ -44,7 +44,7 @@ public class Pomerode.Window : Adw.ApplicationWindow {
     }
 
     private void setup_settings () {
-        settings = new Settings ("com.github.sammarxz");
+        settings = new Settings ("com.github.sammarxz.pomerode");
         settings.changed.connect (on_settings_changed);
         load_settings ();
     }
